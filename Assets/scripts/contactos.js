@@ -26,5 +26,5 @@ function redirectToDetalle() {
 
 function redirectToAgregarContacto() {
   alert("Redirigiendo a la página de agregar contacto");
-  window.location.href   = "agregar_contacto.html";
+  window.location.href   = "nuevoContacto.html";
 }
