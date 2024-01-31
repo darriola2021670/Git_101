@@ -18,6 +18,9 @@ function redirectToAgregarContacto() {
 }
 
 function redirectToFavoritos() {
-  alert("Redirigiendo a la página de contactos favoritos");
   window.location.href   = "favoritos.html";
+}
+
+function redirectToPerfil() {
+  window.location.href   = "perfil.html";
 }
