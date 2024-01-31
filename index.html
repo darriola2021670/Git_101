@@ -1,33 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./Assets/styles/styles.css">
-    <script src="./Assets/logica.js"></script>
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar Sesión</title>
+  <link rel="stylesheet" href="./Assets/styles/styles.css">
 </head>
 <body>
-    <div class="login-box">
-        <h2>Login</h2>
-        <form>
-          <div class="user-box">
-            <input type="text" name="" required="">
-            <label>Correo Electronico</label>
-          </div>
-          <div class="user-box">
-            <input type="password" name="" required="">
-            <label>Contraseña</label>
-          </div>
-          <a href="contactos.html">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            Login
-          </a>
-        </form>
-      </div>
-</body>
 
+<div class="login-page">
+  <div class="form">
+    <form class="login-form">
+      <input type="text" placeholder="nombre de usuario"/>
+      <input type="password" placeholder="contraseña"/>
+      <button>iniciar sesión</button>
+      <p class="message">¿No tienes una cuenta? <a href="#">Crear una cuenta</a></p>
+    </form>
+    <form class="register-form">
+      <input type="text" placeholder="nombre"/>
+      <input type="password" placeholder="contraseña"/>
+      <input type="text" placeholder="dirección de correo electrónico"/>
+      <button>crear cuenta</button>
+      <p class="message">¿Ya estás registrado? <a href="#">Iniciar Sesión</a></p>
+    </form>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+<script src="./Assets/scripts/logica.js"></script>
+
+</body>
 </html>
