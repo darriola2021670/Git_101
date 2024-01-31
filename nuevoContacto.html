@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Personas</title>
+    <link rel="stylesheet" href="./Assets/styles/nuevoContacto.css">
+</head>
+<body>
+
+    <h1>Registrar nuevo Contacto</h1>
+
+    <form id="registroForm">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+
+        <label for="numero">Número:</label>
+        <input type="tel" id="numero" name="numero" required>
+
+        <label for="correo">Correo:</label>
+        <input type="email" id="correo" name="correo" required>
+
+        <button type="button" onclick="guardarRegistro()">Guardar</button>
+    </form>
+
+    <ul id="registrosList">
+
+    </ul>
+
+    <script src="./Assets/scripts/nuevoContacto.js"></script>
+
+</body>
+</html>
