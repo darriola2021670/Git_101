@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Tareas</title>
+  <link rel="stylesheet" href="./Assets/styles/toDoList.css">
+</head>
+<body>
+
+<div id="app">
+  <section class="todo-wrapper">
+    <h1 class="todo-title">{{ today.day }}<br>{{ today.date }}</h1>
+    <form @submit.prevent="addItem">
+      <input type="text" class="input-todo" v-model="new_todo" placeholder="Agregar una nueva tarea" />
+      <button type="submit" class="btn-add">+</button>
+    </form>
+
+    <div v-if="todoList.length > 0">
+      <p class="status busy">Tienes {{ pending.length }} tarea<span v-if="pending.length !== 1">s</span> pendiente<span v-if="pending.length !== 1">s</span></p>
+      <transition-group name="todo-item" tag="ul" class="todo-list">
+        <li v-for="item in pending" :key="item.id">
+          <div class="todo-item">
+            <div>
+              <input class="todo-checkbox" :id="'item_' + item.id" v-model="item.done" type="checkbox">
+              <label :for="'item_' + item.id"></label>
+              <span class="todo-text">{{ item.title }}</span>
+            </div>
+            <span class="delete" @click="deleteItem(item)">🗑️</span>
+          </div>
+        </li>
+      </transition-group>
+    </div>
+
+    <div v-if="completed.length > 0 && showComplete">
+      <p class="status">Tareas completadas: {{ completedPercentage }}</p>
+      <transition-group name="todo-item" tag="ul" class="todo-list archived">
+        <li v-for="item in completed" :key="item.id">
+          <div class="todo-item">
+            <div>
+              <input class="todo-checkbox" :id="'item_' + item.id" v-model="item.done" type="checkbox" disabled>
+              <label :for="'item_' + item.id"></label>
+              <span class="todo-text">{{ item.title }}</span>
+            </div>
+            <span class="delete" @click="deleteItem(item)">🗑️</span>
+          </div>
+        </li>
+      </transition-group>
+    </div>
+
+    <div class="control-buttons">
+      <div class="btn btn-secondary" v-if="completed.length > 0" @click="toggleShowComplete">{{ showComplete ? 'Ocultar' : 'Mostrar' }} Completadas</div>
+      <div class="btn btn-secondary" v-if="todoList.length > 0" @click="clearAll">Limpiar Todo</div>
+    </div>
+  </section>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+<script src="./Assets/scripts/toDoList.js"></script>
+
+</body>
+</html>
