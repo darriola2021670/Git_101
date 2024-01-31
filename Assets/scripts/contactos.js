@@ -24,3 +24,7 @@ function redirectToFavoritos() {
 function redirectToPerfil() {
   window.location.href   = "perfil.html";
 }
+
+function redirectTotoDoList() {
+  window.location.href   = "toDoList.html";
+}
