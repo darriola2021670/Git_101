@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./Assets/styles.css">
+    <link rel="stylesheet" href="./Assets/styles/styles.css">
     <script src="./Assets/logica.js"></script>
     <title>Document</title>
 </head>
@@ -19,7 +19,7 @@
             <input type="password" name="" required="">
             <label>Contraseña</label>
           </div>
-          <a href="#">
+          <a href="contactos.html">
             <span></span>
             <span></span>
             <span></span>
