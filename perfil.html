@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perfil de Usuario</title>
+  <link rel="stylesheet" href="./Assets/styles/perfilUsuario.css">
+  <script src="./Assets/scripts/perfilUsuario.js"></script>
+</head>
+<body>
+  <div class="container">
+    <h1>Perfil de Usuario</h1>
+
+    <form id="perfilForm">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="telefono">Número de Teléfono:</label>
+      <input type="tel" id="telefono" name="telefono" required>
+
+      <label for="correo">Correo Electrónico:</label>
+      <input type="email" id="correo" name="correo" required>
+
+      <label for="foto">Foto de Perfil:</label>
+      <input type="file" id="foto" name="foto">
+
+      <button type="submit">Guardar Cambios</button>
+    </form>
+  </div>
+</body>
+</html>
