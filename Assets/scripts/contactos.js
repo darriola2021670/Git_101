@@ -1,7 +1,7 @@
 function redirectToDetalle(contacto) {
   if (contacto === 'DiegoRene') {
     window.location.href = 'detalleContacto1.html';
-  } else if (contacto === 'RosaDiaz') {
+  } else if (contacto === 'AmandaSofia') {
     window.location.href = 'detalleContacto2.html';
   } else if (contacto === 'JoseRoberto'){
     window.location.href = 'detalleContacto3.html';
