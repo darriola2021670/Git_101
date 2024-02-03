@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lista de Contactos</title>
+  <link rel="stylesheet" href="./Assets/styles/contactos.css">
+  <script src="./Assets/scripts/contactos.js"></script>
+</head>
+<body>
+  <div class="top-buttons">
+    <button class="add-contact-btn" onclick="redirectToFavoritos('favoritos.html')">favoritos</button>
+    <button class="add-contact-btn" onclick="redirectToPerfil('perfil.html')">perfil de usuario</button>
+    <button class="add-contact-btn" onclick="redirectTotoDoList('toDoList.html')">ToDoList</button>
+  </div>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Nombre</th>
+        <th>Número</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+
+      <tr>
+        <td>Diego Rene</td>
+        <td>12345678</td>
+        <td>
+          <button class="detail-btn" onclick="redirectToDetalle('DiegoRene')">Detalle</button>
+        </td>
+      </tr>
+      <tr>
+        <td>Rosa Diaz</td>
+        <td>15414531</td>
+        <td>
+          <button class="detail-btn" onclick="redirectToDetalle('RosaDiaz')">Detalle</button>
+        </td>
+      </tr>
+      <tr>
+        <td>Jose Roberto</td>
+        <td>21873683</td>
+        <td>
+          <button class="detail-btn" onclick="redirectToDetalle('JoseRoberto')">Detalle</button>
+        </td>
+      </tr>
+      <tr>
+        <td>Pablo Andres</td>
+        <td>12378921</td>
+        <td>
+          <button class="detail-btn" onclick="redirectToDetalle('PabloAndre')">Detalle</button>
+        </td>
+      </tr>
+      <tr>
+        <td>Cesar Andre</td>
+        <td>01928389</td>
+        <td>
+          <button class="detail-btn" onclick="redirectToDetalle('CesarAndre')">Detalle</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <button class="add-contact-btn" onclick="redirectToAgregarContacto('nuevoContacto.html')">Agregar Contacto</button>
+
+
+</body>
+</html>
+
